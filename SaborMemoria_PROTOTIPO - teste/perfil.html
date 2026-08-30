@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil - Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <h1>Sabor & Memória</h1>
+
+        <p>Compartilhe receitas. Crie memórias.</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="receitas.html">Receitas</a>
+
+        <a href="dicas.html">Dicas</a>
+
+        <a href="desafios.html">Desafios</a>
+
+        <a href="sobrenos.html">Sobre nós</a>
+
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html">Entrar</a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="pagina-perfil">
+
+
+    <!-- PERFIL DO USUÁRIO -->
+
+    <section class="perfil-topo">
+
+
+        <div class="perfil-foto">
+
+            <img
+                src="imagens/perfil.png"
+                alt="Foto de perfil de Maria Silva"
+            >
+
+        </div>
+
+
+
+        <div class="perfil-info">
+
+            <h2>Maria Silva</h2>
+
+            <p class="email">
+                maria@email.com
+            </p>
+
+            <p
+                class="descricao"
+                id="descricaoPerfil"
+            >
+                MECHER AQUI PARA EDIÇAO
+            </p>
+
+
+            <div class="botoes-perfil">
+
+                <button
+                    onclick="editarPerfil()"
+                    class="btn-editar"
+                >
+
+                    <img
+                        src="imagens/editar.png"
+                        alt=""
+                    >
+
+                    Editar perfil
+
+                </button>
+
+
+                <button
+                    onclick="sair()"
+                    class="btn-sair"
+                >
+
+                    Sair
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ESTATÍSTICAS -->
+
+    <section class="estatisticas">
+
+
+        <div class="estatistica">
+
+            <strong>12</strong>
+
+            <span>
+                Receitas publicadas
+            </span>
+
+        </div>
+
+
+
+        <div class="estatistica">
+
+            <strong>8</strong>
+
+            <span>
+                Receitas favoritas
+            </span>
+
+        </div>
+
+
+
+        <div class="estatistica">
+
+            <strong>3</strong>
+
+            <span>
+                Conquistas
+            </span>
+
+        </div>
+        <div class="acoes-perfil">
+
+    <a
+        href="adicionar-receita.html"
+        class="btn-perfil"
+    >
+        Publicar uma receita
+    </a>
+
+</div>
+
+
+    </section>
+
+
+
+    <!-- MINHAS RECEITAS -->
+
+    <section class="perfil-secao">
+
+
+        <div class="titulo-secao">
+
+            <h2>
+                Minhas receitas
+            </h2>
+
+            <a
+                href="receitas.html"
+                class="btn-link"
+            >
+                Ver todas
+            </a>
+
+        </div>
+
+
+
+        <div class="receitas-perfil">
+
+
+            <div class="receita-perfil">
+
+                <img
+                    src="imagens/bolo.jpg"
+                    alt="Bolo de cenoura"
+                >
+
+                <div class="receita-info">
+
+                    <h3>
+                        Bolo de Cenoura
+                    </h3>
+
+                    <p>
+                        Uma receita simples e deliciosa
+                        para qualquer momento.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="receita-perfil">
+
+                <img
+                    src="imagens/torta.jpg"
+                    alt="Torta de maçã"
+                >
+
+                <div class="receita-info">
+
+                    <h3>
+                        Torta de Maçã
+                    </h3>
+
+                    <p>
+                        Uma opção perfeita para
+                        momentos especiais.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="receita-perfil">
+
+                <img
+                    src="imagens/cookies.jpg"
+                    alt="Cookies caseiros"
+                >
+
+                <div class="receita-info">
+
+                    <h3>
+                        Cookies Caseiros
+                    </h3>
+
+                    <p>
+                        Crocantes por fora e macios
+                        por dentro.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FAVORITAS -->
+
+    <section class="perfil-secao">
+
+
+        <div class="titulo-secao">
+
+            <h2>
+                Receitas favoritas
+            </h2>
+
+            <a
+                href="receitas.html"
+                class="btn-link"
+            >
+                Ver todas
+            </a>
+
+        </div>
+
+
+
+        <div class="favoritas">
+
+
+            <div class="favorita">
+
+                <img
+                    src="imagens/lasanha.jpg"
+                    alt="Lasanha caseira"
+                >
+
+                <div>
+
+                    <h3>
+                        Lasanha Caseira
+                    </h3>
+
+                    <p>
+                        Adicionada aos favoritos
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="favorita">
+
+                <img
+                    src="imagens/pudim.jpg"
+                    alt="Pudim de leite"
+                >
+
+                <div>
+
+                    <h3>
+                        Pudim de Leite
+                    </h3>
+
+                    <p>
+                        Adicionada aos favoritos
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="favorita">
+
+                <img
+                    src="imagens/panqueca.jpg"
+                    alt="Panquecas"
+                >
+
+                <div>
+
+                    <h3>
+                        Panquecas
+                    </h3>
+
+                    <p>
+                        Adicionada aos favoritos
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONQUISTAS -->
+
+    <section class="perfil-secao">
+
+
+        <h2>
+            Conquistas
+        </h2>
+
+
+        <div class="conquistas">
+
+
+            <div class="conquista ativa">
+
+                <img
+                    src="imagens/trofeu.png"
+                    alt="Primeira receita"
+                >
+
+                <h3>
+                    Primeira receita
+                </h3>
+
+                <p>
+                    Publicou sua primeira receita.
+                </p>
+
+            </div>
+
+
+
+            <div class="conquista ativa">
+
+                <img
+                    src="imagens/cozinha.png"
+                    alt="Cozinheira ativa"
+                >
+
+                <h3>
+                    Cozinheira ativa
+                </h3>
+
+                <p>
+                    Publicou 10 receitas.
+                </p>
+
+            </div>
+
+
+
+            <div class="conquista ativa">
+
+                <img
+                    src="imagens/coracao.png"
+                    alt="Amor pelos sabores"
+                >
+
+                <h3>
+                    Amor pelos sabores
+                </h3>
+
+                <p>
+                    Salvou 5 receitas favoritas.
+                </p>
+
+            </div>
+
+
+
+            <div class="conquista bloqueada">
+
+                <img
+                    src="imagens/cadeado.png"
+                    alt="Conquista bloqueada"
+                >
+
+                <h3>
+                    Chef da comunidade
+                </h3>
+
+                <p>
+                    Publique 20 receitas.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MEMÓRIA CULINÁRIA -->
+
+    <section class="memoria">
+
+
+        <img
+            src="imagens/memoria.png"
+            alt="Memória culinária"
+            class="icone-memoria"
+        >
+
+
+        <h2>
+            Minha memória culinária
+        </h2>
+
+
+        <p
+            id="memoriaTexto"
+            class="memoria-texto"
+        >
+
+            "O bolo de cenoura da minha avó sempre
+            me lembra minha infância e os domingos
+            em família."
+
+        </p>
+
+
+        <button
+            onclick="editarMemoria()"
+            class="btn-memoria"
+        >
+
+            <img
+                src="imagens/editar.png"
+                alt=""
+            >
+
+            Editar memória
+
+        </button>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        © 2026 Sabor & Memória
+    </p>
+
+</footer>
+
+
+<script src="js/perfil.js"></script>
+<script src="js/favoritos.js"></script>
+
+
+</body>
+
+</html>

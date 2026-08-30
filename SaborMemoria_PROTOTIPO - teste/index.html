@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h1>Sabor & Memória</h1>
+        <p>Compartilhe receitas. Crie memórias.</p>
+    </div>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="receitas.html">Receitas</a>
+    <a href="dicas.html">Dicas</a>
+    <a href="desafios.html">Desafios</a>
+    <a href="sobrenos.html">Sobre nós</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="login.html">Entrar</a>
+</nav>
+    <div class="acoes">
+        <input type="text" id="busca" placeholder="Buscar receitas...">
+
+        <button onclick="pesquisar()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+</header>
+
+<section class="banner">
+
+    <div class="overlay">
+
+        <div class="texto-banner">
+
+            <h2>
+                Receitas que aquecem o coração
+                e criam memórias.
+            </h2>
+
+            <p>
+                Encontre receitas deliciosas, compartilhe as suas,
+                aprenda técnicas incríveis e participe de desafios.
+            </p>
+
+            <div class="botoes">
+
+                <button class="btn-laranja"
+                    onclick="window.location.href='adicionar-receita.html'">
+                     Publicar Receita
+                </button>
+
+                <button class="btn-transparente"
+                     onclick="window.location.href='receitas.html'">
+                    Explorar Receita
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="categorias">
+
+    <h2>Explore por categorias</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="imagens/familia.jpg">
+            <h3>Familiares</h3>
+            <p>Receitas de geração em geração.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/pao.jpg">
+            <h3>Sem Glúten</h3>
+            <p>Saúde e sabor.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/doce.jpg">
+            <h3>Zero Açúcar</h3>
+            <p>Doce na medida certa.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/vegetariana.jpg">
+            <h3>Vegetariana</h3>
+            <p>Sem carne e deliciosa.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/vegana.jpg">
+            <h3>Vegana</h3>
+            <p>100% vegetal.</p>
+        </div>
+
+        <div class="card">
+            <img src="imagens/sobremesa.jpg">
+            <h3>Sobremesas</h3>
+            <p>Para adoçar momentos.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="receitas">
+
+    <h2>Receitas em destaque</h2>
+
+    <div class="receita-card">
+
+        <img src="imagens/bolo.jpg">
+
+        <h3>Bolo de Cenoura</h3>
+
+        <p>
+            Receita clássica com cobertura de chocolate.
+        </p>
+
+        <a href="receita.html" class="btn-receita">
+            Ver Receita
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Sabor & Memória</p>
+</footer>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>

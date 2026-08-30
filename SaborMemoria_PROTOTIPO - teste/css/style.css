@@ -1,0 +1,3376 @@
+/* =========================================================
+   SABOR & MEMÓRIA
+   CSS PRINCIPAL
+   PALETA: BEGE • CREME • MARROM • CARAMELO
+========================================================= */
+
+
+/* =========================================================
+   1. VARIÁVEIS
+========================================================= */
+
+:root{
+    --fundo:#F8F1E7;
+    --branco:#FFFDF8;
+
+    --marrom:#6B4F3A;
+    --marrom-escuro:#4A3528;
+    --marrom-texto:#594234;
+
+    --caramelo:#A67C52;
+    --caramelo-escuro:#8B6543;
+
+    --bege:#E8D8C3;
+    --bege-claro:#F1E5D5;
+
+    --texto:#38312C;
+    --texto-2:#5F554E;
+    --texto-3:#7A7068;
+
+    --borda:#DDD0C0;
+
+    --sombra:0 3px 12px rgba(74,53,40,.08);
+    --raio:15px;
+}
+
+
+/* =========================================================
+   2. RESET / CONFIGURAÇÕES GERAIS
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--fundo);
+    color:var(--texto);
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:Arial,sans-serif;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   3. HEADER / NAVEGAÇÃO
+========================================================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:var(--branco);
+}
+
+.logo h1{
+    color:var(--marrom-escuro);
+}
+
+nav{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:var(--texto);
+    font-weight:bold;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:var(--caramelo);
+}
+
+.acoes{
+    display:flex;
+    gap:10px;
+}
+
+.acoes input{
+    padding:10px;
+}
+
+
+/* =========================================================
+   4. BOTÕES
+========================================================= */
+
+.btn-roxo,
+.btn-login,
+.btn-cadastro,
+.btn-publicar,
+.btn-perfil,
+.btn-receita,
+.btn-ver-receita,
+.btn-desafio,
+.btn-ler,
+.btn-dicas{
+    background:var(--caramelo);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn-roxo:hover,
+.btn-login:hover,
+.btn-cadastro:hover,
+.btn-publicar:hover,
+.btn-perfil:hover,
+.btn-receita:hover,
+.btn-ver-receita:hover,
+.btn-desafio:hover,
+.btn-ler:hover,
+.btn-dicas:hover{
+    background:var(--caramelo-escuro);
+}
+
+.btn-laranja{
+    display:inline-block;
+    background:var(--caramelo);
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn-laranja:hover{
+    background:var(--caramelo-escuro);
+}
+
+.btn-transparente{
+    display:inline-block;
+    background:transparent;
+    color:white;
+    border:2px solid white;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   5. FOOTER
+========================================================= */
+
+footer{
+    background:var(--marrom-escuro);
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+
+/* =========================================================
+   6. ELEMENTOS DE TÍTULO
+========================================================= */
+
+.titulo-pagina{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.titulo-pagina h2,
+.sobre-introducao h2{
+    font-size:40px;
+    color:var(--marrom-escuro);
+    margin-bottom:10px;
+}
+
+.titulo-pagina p{
+    color:var(--texto-3);
+}
+
+.titulo-pequeno,
+.receitas-cabecalho span,
+.titulo-lista span,
+.convite-publicar span,
+.titulo-categorias span,
+.dicas-cabecalho span,
+.busca-dicas span,
+.titulo-reportagens span,
+.destaque-conteudo>span,
+.convite-dicas span,
+.desafios-intro span,
+.titulo-desafios span,
+.convite-desafio span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   7. HOME
+========================================================= */
+
+.banner{
+    height:600px;
+    background:url("../imagens/banner.jpg") center/cover;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    background:rgba(50,35,25,.45);
+    display:flex;
+    align-items:center;
+}
+
+.texto-banner{
+    color:white;
+    margin-left:80px;
+    max-width:600px;
+}
+
+.texto-banner h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.texto-banner p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.botoes{
+    display:flex;
+    gap:20px;
+}
+
+.categorias,
+.receitas{
+    padding:70px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    width:220px;
+    background:var(--branco);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin-top:15px;
+}
+
+.card p{
+    padding:10px;
+}
+
+.receita-card{
+    width:350px;
+    margin:auto;
+    background:var(--branco);
+    padding:20px;
+    border-radius:12px;
+    box-shadow:var(--sombra);
+}
+
+.receita-card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.receita-card button{
+    margin-top:15px;
+}
+
+
+/* =========================================================
+   8. LISTAGEM DE RECEITAS
+========================================================= */
+
+.lista-receitas{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding-bottom:60px;
+}
+
+.receita{
+    background:var(--branco);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:.2s;
+}
+
+.receita:hover{
+    transform:translateY(-4px);
+}
+
+.receita>img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    color:var(--marrom-escuro);
+    margin-bottom:10px;
+}
+
+.info p{
+    color:var(--texto-3);
+    margin-bottom:15px;
+}
+
+.info button{
+    background:var(--caramelo);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+}
+
+.info button:hover{
+    background:var(--caramelo-escuro);
+}
+
+
+/* =========================================================
+   9. PÁGINA DE RECEITAS
+========================================================= */
+
+.receitas-cabecalho{
+    max-width:1000px;
+    margin:50px auto 25px;
+    padding:0 20px;
+    text-align:center;
+}
+
+.receitas-cabecalho h2{
+    color:var(--marrom-escuro);
+    font-size:36px;
+    margin:10px 0;
+}
+
+.receitas-cabecalho p{
+    max-width:650px;
+    margin:auto;
+    color:var(--texto-3);
+    line-height:1.6;
+}
+
+.area-busca{
+    max-width:750px;
+    margin:0 auto 30px;
+    padding:0 20px;
+}
+
+.campo-busca{
+    display:flex;
+    background:var(--branco);
+    padding:7px;
+    border-radius:12px;
+    box-shadow:var(--sombra);
+}
+
+.campo-busca input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:13px 15px;
+    background:transparent;
+    font-size:15px;
+}
+
+.campo-busca button{
+    border:none;
+    background:var(--caramelo);
+    color:white;
+    padding:0 22px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.campo-busca button:hover{
+    background:var(--caramelo-escuro);
+}
+
+.categorias-receitas{
+    max-width:1100px;
+    margin:0 auto 45px;
+    padding:0 20px;
+}
+
+.titulo-categorias{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.titulo-categorias h3{
+    color:var(--marrom-escuro);
+    margin-bottom:5px;
+}
+
+.titulo-categorias p{
+    color:#8A817A;
+    font-size:14px;
+}
+
+.botoes-categorias{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.botoes-categorias button{
+    border:1px solid var(--bege);
+    background:var(--branco);
+    color:var(--marrom);
+    padding:9px 17px;
+    border-radius:20px;
+    transition:.2s;
+}
+
+.botoes-categorias button:hover,
+.botoes-categorias button.categoria-ativa{
+    background:var(--caramelo);
+    color:white;
+    border-color:var(--caramelo);
+}
+
+.lista-receitas-pagina{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 50px;
+}
+
+.titulo-lista{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:22px;
+}
+
+.titulo-lista h2{
+    color:var(--marrom-escuro);
+    font-size:27px;
+    margin-top:7px;
+}
+
+.titulo-lista p{
+    color:#8A817A;
+    font-size:14px;
+}
+
+.grade-receitas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card-receita{
+    background:var(--branco);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:.25s;
+}
+
+.card-receita:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(74,53,40,.13);
+}
+
+.card-receita>img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.conteudo-card{
+    padding:18px;
+}
+
+.categoria-card{
+    display:inline-block;
+    color:var(--marrom);
+    background:var(--bege-claro);
+    padding:5px 9px;
+    border-radius:6px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:9px;
+}
+
+.conteudo-card h3{
+    color:var(--texto);
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.conteudo-card p{
+    color:var(--texto-3);
+    font-size:14px;
+    line-height:1.5;
+    min-height:42px;
+    margin-bottom:15px;
+}
+
+.btn-ver-receita{
+    display:inline-block;
+    padding:9px 15px;
+    font-size:13px;
+}
+
+.nenhuma-receita,
+.nenhum-resultado{
+    display:none;
+    text-align:center;
+    color:#888;
+    padding:40px;
+}
+
+.convite-publicar{
+    max-width:1100px;
+    margin:0 auto 60px;
+    padding:30px 35px;
+    background:var(--bege-claro);
+    border-radius:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.convite-publicar h2{
+    color:var(--marrom-escuro);
+    margin:7px 0;
+}
+
+.convite-publicar p{
+    color:var(--texto-2);
+    font-size:14px;
+}
+
+.btn-publicar{
+    display:inline-block;
+    padding:12px 20px;
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   10. RECEITA INDIVIDUAL
+========================================================= */
+
+.pagina-receita{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.receita-detalhe{
+    background:var(--branco);
+    border-radius:18px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    box-shadow:var(--sombra);
+    margin-bottom:30px;
+}
+
+.imagem-receita img{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    object-fit:cover;
+}
+
+.receita-conteudo{
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.categoria-receita{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.receita-conteudo h2{
+    font-size:32px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.descricao{
+    color:var(--texto-2);
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.informacoes{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.informacao{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px;
+    background:var(--fundo);
+    border-radius:10px;
+}
+
+.informacao img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+}
+
+.informacao strong,
+.informacao span{
+    display:block;
+    font-size:12px;
+}
+
+.informacao strong{
+    color:#51463E;
+}
+
+.informacao span{
+    color:#7A7068;
+    margin-top:3px;
+}
+
+.btn-favorito{
+    width:fit-content;
+    padding:12px 18px;
+    border:1px solid var(--caramelo);
+    background:var(--branco);
+    color:var(--caramelo);
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn-favorito:hover{
+    background:var(--caramelo);
+    color:white;
+}
+
+.receita-informacoes{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.bloco-receita{
+    background:var(--branco);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.bloco-receita h3{
+    color:var(--marrom-escuro);
+    font-size:21px;
+    margin-bottom:20px;
+}
+
+.bloco-receita ul,
+.bloco-receita ol{
+    padding-left:20px;
+}
+
+.bloco-receita li{
+    color:var(--texto-2);
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+.memoria-receita{
+    background:var(--bege-claro);
+    padding:35px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.memoria-receita img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+}
+
+.memoria-receita span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.memoria-receita h2{
+    color:var(--marrom-escuro);
+    margin:7px 0 10px;
+}
+
+.memoria-receita p{
+    color:var(--texto-2);
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   11. AVALIAÇÃO E COMENTÁRIOS
+========================================================= */
+
+.avaliacao-receita,
+.comentarios{
+    background:var(--branco);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+    margin-bottom:30px;
+}
+
+.avaliacao-receita{
+    text-align:center;
+}
+
+.avaliacao-receita h2,
+.comentarios h2{
+    color:var(--texto);
+    margin-bottom:8px;
+}
+
+.avaliacao-receita>p,
+.texto-comentarios{
+    color:#777;
+    font-size:14px;
+}
+
+.estrelas{
+    margin-top:20px;
+}
+
+.estrelas button{
+    width:40px;
+    height:40px;
+    margin:4px;
+    border:1px solid var(--caramelo);
+    background:var(--branco);
+    color:var(--caramelo);
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.estrelas button:hover{
+    background:var(--caramelo);
+    color:white;
+}
+
+.mensagem-avaliacao{
+    margin-top:15px;
+    color:var(--caramelo)!important;
+    font-weight:bold;
+}
+
+.texto-comentarios{
+    margin-bottom:25px;
+}
+
+.lista-comentarios{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.comentario{
+    background:var(--fundo);
+    padding:15px;
+    border-radius:10px;
+}
+
+.comentario strong{
+    color:var(--marrom-escuro);
+}
+
+.comentario p{
+    color:var(--texto-2);
+    margin-top:6px;
+    line-height:1.5;
+}
+
+#formComentario{
+    display:flex;
+    flex-direction:column;
+}
+
+#formComentario label{
+    font-size:14px;
+    font-weight:bold;
+    color:#51463E;
+    margin-bottom:6px;
+}
+
+#formComentario input,
+#formComentario textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid var(--borda);
+    border-radius:8px;
+    margin-bottom:15px;
+    outline:none;
+}
+
+#formComentario textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+#formComentario input:focus,
+#formComentario textarea:focus{
+    border-color:var(--caramelo);
+}
+
+#formComentario button{
+    width:fit-content;
+    padding:11px 18px;
+    border:none;
+    border-radius:8px;
+    background:var(--caramelo);
+    color:white;
+    font-weight:bold;
+}
+
+.voltar-receitas{
+    text-align:center;
+    margin:30px 0 50px;
+}
+
+.btn-receita{
+    display:inline-block;
+    padding:11px 20px;
+}
+/* =========================================================
+   PARTICIPAR DO DESAFIO
+========================================================= */
+
+.participar-pagina{
+    max-width:950px;
+    margin:0 auto;
+    padding:35px 20px 60px;
+}
+
+
+/* VOLTAR */
+
+.voltar-desafio{
+    margin-bottom:25px;
+}
+
+.voltar-desafio a{
+    color:var(--caramelo);
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.voltar-desafio a:hover{
+    text-decoration:underline;
+}
+
+
+/* INTRODUÇÃO */
+
+.participar-intro{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 35px;
+}
+
+.participar-intro span,
+.form-desafio-topo span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.participar-intro h2{
+    color:var(--marrom-escuro);
+    font-size:40px;
+    line-height:1.2;
+    margin:12px 0;
+}
+
+.participar-intro p{
+    color:var(--texto-2);
+    line-height:1.7;
+}
+
+
+/* RESUMO DO DESAFIO */
+
+.resumo-desafio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.resumo-item{
+    background:var(--branco);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:var(--sombra);
+}
+
+.resumo-item span{
+    display:block;
+    color:var(--caramelo);
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    margin-bottom:7px;
+}
+
+.resumo-item strong{
+    color:var(--marrom-escuro);
+    font-size:14px;
+}
+
+
+/* FORMULÁRIO */
+
+.form-desafio-container{
+    background:var(--branco);
+    padding:40px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.form-desafio-topo{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.form-desafio-topo h2{
+    color:var(--marrom-escuro);
+    font-size:30px;
+    margin:10px 0 8px;
+}
+
+.form-desafio-topo p{
+    color:var(--texto-3);
+    line-height:1.6;
+}
+
+
+/* CAMPOS */
+
+.form-desafio{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.form-desafio .campo-form{
+    margin-bottom:0;
+}
+
+.form-desafio .campo-form label{
+    display:block;
+    color:#51463E;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-desafio .campo-form input,
+.form-desafio .campo-form textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--borda);
+    border-radius:8px;
+    background:var(--branco);
+    font-size:14px;
+    outline:none;
+}
+
+.form-desafio .campo-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-desafio .campo-form input:focus,
+.form-desafio .campo-form textarea:focus{
+    border-color:var(--caramelo);
+}
+
+
+/* FOTO */
+
+#nomeFoto{
+    display:block;
+    margin-top:7px;
+    color:#888;
+    font-size:12px;
+}
+
+.preview-imagem{
+    display:none;
+    text-align:center;
+    padding:15px;
+    background:var(--fundo);
+    border-radius:12px;
+}
+
+.preview-imagem.ativo{
+    display:block;
+}
+
+.preview-imagem img{
+    max-width:300px;
+    max-height:250px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+
+/* TERMOS */
+
+.termos-desafio{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    padding:5px 0;
+}
+
+.termos-desafio input{
+    margin-top:3px;
+}
+
+.termos-desafio label{
+    color:var(--texto-2);
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* BOTÕES */
+
+.acoes-desafio{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:12px;
+}
+
+.acoes-desafio .btn-cancelar,
+.acoes-desafio .btn-publicar{
+    width:auto;
+}
+
+
+/* MENSAGEM */
+
+.mensagem-desafio{
+    text-align:center;
+    color:var(--caramelo);
+    font-size:14px;
+    font-weight:bold;
+}
+
+.mensagem-desafio.erro{
+    color:#A34A3A;
+}
+
+
+/* SUCESSO */
+
+.participacao-sucesso{
+    display:none;
+    background:var(--branco);
+    padding:50px 35px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+    text-align:center;
+    margin-top:30px;
+}
+
+.participacao-sucesso.ativo{
+    display:block;
+}
+
+.icone-sucesso{
+    width:60px;
+    height:60px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--bege-claro);
+    color:var(--caramelo);
+    font-size:30px;
+    font-weight:bold;
+}
+
+.participacao-sucesso>span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.participacao-sucesso h2{
+    color:var(--marrom-escuro);
+    font-size:30px;
+    margin:12px 0;
+}
+
+.participacao-sucesso p{
+    color:var(--texto-2);
+    line-height:1.6;
+}
+
+.sucesso-acoes{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:25px;
+}
+
+.btn-secundario{
+    display:inline-block;
+    padding:12px 20px;
+    border:1px solid var(--caramelo);
+    border-radius:8px;
+    color:var(--caramelo);
+    background:var(--branco);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-secundario:hover{
+    background:var(--bege-claro);
+}
+
+
+/* =========================================================
+   12. SOBRE NÓS
+========================================================= */
+
+.sobre-introducao{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    padding:60px 20px 30px;
+}
+
+.sobre-introducao p,
+.nossa-missao p,
+.sobre-card p,
+.significado p,
+.texto-equipe,
+.membro p{
+    color:var(--texto-2);
+    line-height:1.6;
+}
+
+.sobre-introducao p{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.logo-sobre{
+    width:150px;
+    margin:15px auto 25px;
+}
+
+.nossa-missao{
+    background:var(--branco);
+    max-width:1000px;
+    margin:20px auto;
+    padding:40px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+}
+
+.nossa-missao h2,
+.funcionalidades h2,
+.sobre-card h3,
+.significado h2,
+.equipe h2,
+.equipe h3{
+    color:var(--marrom-escuro);
+}
+
+.nossa-missao h2{
+    margin-bottom:15px;
+}
+
+.funcionalidades,
+.equipe{
+    padding:60px 30px;
+    text-align:center;
+}
+
+.funcionalidades h2{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.sobre-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.sobre-card,
+.membro{
+    background:var(--branco);
+    padding:25px 20px;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+    transition:.2s;
+}
+
+.sobre-card:hover,
+.membro:hover{
+    transform:translateY(-4px);
+}
+
+.sobre-card .icone{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.sobre-card h3{
+    margin-bottom:10px;
+}
+
+.significado{
+    background:var(--bege-claro);
+    text-align:center;
+    padding:50px 20px;
+}
+
+.significado h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.significado p{
+    max-width:800px;
+    margin:10px auto;
+}
+
+.equipe h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.texto-equipe{
+    max-width:700px;
+    margin:0 auto 35px;
+}
+
+.equipe-cards{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.membro img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 12px;
+}
+
+.membro h3{
+    margin-bottom:5px;
+}
+
+.membro span{
+    color:var(--caramelo);
+    font-weight:bold;
+    font-size:14px;
+}
+
+
+/* =========================================================
+   13. PERFIL
+========================================================= */
+
+.pagina-perfil{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.perfil{
+    padding:60px;
+    display:flex;
+    justify-content:center;
+}
+
+.perfil-card{
+    background:var(--branco);
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:400px;
+    box-shadow:var(--sombra);
+}
+
+.perfil-card img{
+    width:120px;
+    border-radius:50%;
+    margin:0 auto 15px;
+}
+
+.perfil-topo{
+    background:var(--branco);
+    padding:35px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-bottom:25px;
+    box-shadow:var(--sombra);
+}
+
+.perfil-foto img{
+    width:135px;
+    height:135px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--bege);
+}
+
+.perfil-info h2{
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+.email{
+    color:#777;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.perfil-info .descricao{
+    color:var(--texto-2);
+    max-width:550px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.botoes-perfil{
+    display:flex;
+    gap:10px;
+}
+
+.btn-editar,
+.btn-sair,
+.btn-memoria{
+    border:none;
+    padding:10px 17px;
+    border-radius:8px;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.btn-editar{
+    background:var(--caramelo);
+    color:white;
+}
+
+.btn-sair{
+    background:#EEE7DE;
+    color:var(--texto-2);
+}
+
+.btn-sair:hover{
+    background:#DDD2C5;
+}
+
+.btn-editar img,
+.btn-memoria img{
+    width:16px;
+    height:16px;
+}
+
+.acoes-perfil{
+    margin-top:25px;
+}
+
+.btn-perfil{
+    display:inline-block;
+    padding:12px 22px;
+}
+
+.estatisticas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.estatistica{
+    background:var(--branco);
+    padding:22px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:var(--sombra);
+    transition:.2s;
+}
+
+.estatistica:hover{
+    transform:translateY(-3px);
+}
+
+.estatistica strong{
+    display:block;
+    font-size:28px;
+    color:var(--caramelo);
+    margin-bottom:7px;
+}
+
+.estatistica span{
+    color:#666;
+    font-size:14px;
+}
+
+.perfil-secao{
+    background:var(--branco);
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:25px;
+    box-shadow:var(--sombra);
+}
+
+.perfil-secao>h2,
+.titulo-secao h2{
+    color:var(--texto);
+}
+
+.titulo-secao{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.btn-link{
+    color:var(--caramelo);
+    font-size:14px;
+    font-weight:bold;
+}
+
+.btn-link:hover{
+    text-decoration:underline;
+}
+
+.receitas-perfil,
+.favoritas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.receita-perfil,
+.favorita{
+    border:1px solid var(--bege);
+    border-radius:12px;
+    overflow:hidden;
+    background:var(--branco);
+    transition:.2s;
+}
+
+.receita-perfil:hover,
+.favorita:hover{
+    transform:translateY(-4px);
+}
+
+.receita-perfil>img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+}
+
+.receita-info,
+.favorita div{
+    padding:17px;
+}
+
+.receita-info h3,
+.favorita h3{
+    margin-bottom:8px;
+    color:var(--texto);
+}
+
+.receita-info p,
+.favorita p{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.favorita img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+}
+
+.conquistas{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.conquista{
+    text-align:center;
+    padding:20px 12px;
+    border-radius:12px;
+    border:1px solid var(--bege);
+    transition:.2s;
+}
+
+.conquista:hover{
+    transform:translateY(-3px);
+}
+
+.conquista.ativa{
+    background:var(--fundo);
+}
+
+.conquista.bloqueada{
+    opacity:.45;
+}
+
+.conquista img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+    margin:0 auto 12px;
+}
+
+.conquista h3{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.conquista p{
+    font-size:13px;
+    color:#777;
+    line-height:1.4;
+}
+
+.memoria{
+    background:var(--bege-claro);
+    padding:40px 30px;
+    border-radius:18px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.icone-memoria{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    margin:0 auto 12px;
+}
+
+.memoria h2{
+    margin-bottom:18px;
+}
+
+.memoria-texto{
+    max-width:700px;
+    margin:0 auto 22px;
+    color:var(--texto-2);
+    line-height:1.7;
+    font-style:italic;
+}
+
+.btn-memoria{
+    background:var(--branco);
+    color:var(--caramelo);
+    border:1px solid var(--caramelo);
+}
+
+.btn-memoria:hover{
+    background:var(--caramelo);
+    color:white;
+}
+
+
+/* =========================================================
+   14. LOGIN / CADASTRO
+========================================================= */
+
+.login-pagina,
+.cadastro-pagina{
+    min-height:75vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:55px 20px;
+}
+
+.login-area,
+.cadastro-area{
+    width:100%;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    background:var(--branco);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 30px rgba(74,53,40,.1);
+}
+
+.login-area{
+    max-width:950px;
+}
+
+.cadastro-area{
+    max-width:1000px;
+}
+
+.login-apresentacao,
+.cadastro-apresentacao{
+    background:var(--bege-claro);
+    padding:50px 40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.login-logo,
+.cadastro-logo{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    margin-bottom:25px;
+}
+
+.login-apresentacao h2,
+.cadastro-apresentacao h2{
+    color:var(--marrom-escuro);
+    font-size:30px;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+
+.login-apresentacao>p,
+.cadastro-apresentacao>p{
+    color:var(--texto-2);
+    line-height:1.7;
+    font-size:15px;
+}
+
+.login-frase{
+    margin-top:30px;
+    padding:18px;
+    border-left:3px solid var(--caramelo);
+}
+
+.login-frase p{
+    color:var(--texto-2);
+    font-style:italic;
+    line-height:1.5;
+}
+
+.login-box,
+.cadastro-box{
+    padding:45px;
+}
+
+.login-titulo,
+.cadastro-titulo{
+    margin-bottom:30px;
+}
+
+.login-titulo h2,
+.cadastro-titulo h2{
+    color:var(--texto);
+    margin-bottom:7px;
+}
+
+.login-titulo h2{
+    font-size:28px;
+}
+
+.cadastro-titulo h2{
+    font-size:27px;
+}
+
+.login-titulo p,
+.cadastro-titulo p{
+    color:#777;
+    font-size:14px;
+}
+
+.campo-login,
+.campo{
+    margin-bottom:20px;
+}
+
+.campo label,
+.campo-login label{
+    display:block;
+    color:#51463E;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.campo input,
+.campo-login input{
+    width:100%;
+    padding:13px 14px;
+    border:1px solid var(--borda);
+    border-radius:8px;
+    font-size:14px;
+    outline:none;
+}
+
+.campo input:focus,
+.campo-login input:focus{
+    border-color:var(--caramelo);
+}
+
+.campo small{
+    display:block;
+    margin-top:6px;
+    color:#999;
+    font-size:12px;
+}
+
+.login-opcoes{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+    font-size:13px;
+}
+
+.login-opcoes label{
+    color:#666;
+}
+
+.login-opcoes a,
+.criar-conta a,
+.login-link a,
+.termos a{
+    color:var(--caramelo);
+    font-weight:bold;
+}
+
+.login-opcoes a:hover,
+.termos a:hover{
+    text-decoration:underline;
+}
+
+.btn-login,
+.btn-cadastro{
+    width:100%;
+    padding:13px;
+    font-size:15px;
+}
+
+.mensagem-login{
+    text-align:center;
+    font-size:14px;
+    margin-top:15px;
+}
+
+.criar-conta,
+.login-link{
+    text-align:center;
+    margin-top:22px;
+    padding-top:20px;
+    border-top:1px solid #EEE5DA;
+}
+
+.criar-conta p,
+.login-link p{
+    color:#777;
+    font-size:14px;
+}
+
+.cadastro-apresentacao>p{
+    margin-bottom:30px;
+    max-width:400px;
+}
+
+.cadastro-beneficios{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.beneficio{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--marrom);
+    font-size:14px;
+}
+
+.beneficio img{
+    width:30px;
+    height:30px;
+}
+
+.termos{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    margin:20px 0;
+}
+
+.termos input{
+    margin-top:3px;
+}
+
+.termos label{
+    color:#666;
+    font-size:13px;
+    line-height:1.4;
+}
+
+
+/* =========================================================
+   15. TERMOS
+========================================================= */
+
+.termos-pagina{
+    max-width:950px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.termos-introducao,
+.termos-conteudo{
+    background:var(--branco);
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.termos-introducao{
+    padding:45px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.termos-introducao span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.termos-introducao h2{
+    font-size:32px;
+    margin:12px 0;
+}
+
+.termos-introducao p,
+.termo p{
+    color:var(--texto-2);
+    line-height:1.7;
+}
+
+.data-termos{
+    font-size:13px;
+    margin-top:15px;
+    color:#999!important;
+}
+
+.termos-conteudo{
+    padding:40px;
+}
+
+.termo{
+    padding-bottom:25px;
+    margin-bottom:25px;
+    border-bottom:1px solid #EEE5DA;
+}
+
+.termo:last-child{
+    border-bottom:none;
+    margin-bottom:0;
+}
+
+.termo h3{
+    color:var(--marrom-escuro);
+    font-size:19px;
+    margin-bottom:12px;
+}
+
+.termo p{
+    font-size:15px;
+    margin-bottom:10px;
+}
+
+.termos-final{
+    margin-top:25px;
+    padding:35px;
+    background:var(--bege-claro);
+    border-radius:18px;
+    text-align:center;
+}
+
+.termos-final h3,
+.contatos-termos strong{
+    color:var(--marrom-escuro);
+}
+
+.termos-final p{
+    color:var(--texto-2);
+}
+
+.contatos-termos{
+    margin-top:18px;
+    padding:18px 20px;
+    background:var(--fundo);
+    border-radius:10px;
+}
+
+.contatos-termos p{
+    margin-bottom:8px;
+}
+
+.contatos-termos p:last-child{
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   16. ADICIONAR RECEITA
+========================================================= */
+
+.adicionar-receita{
+    max-width:950px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.titulo-adicionar{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo-adicionar span{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.titulo-adicionar h2{
+    color:var(--texto);
+    font-size:32px;
+    margin:10px 0;
+}
+
+.titulo-adicionar p{
+    color:#777;
+    line-height:1.6;
+}
+
+.form-receita{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.bloco-formulario{
+    background:var(--branco);
+    padding:30px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.bloco-formulario h3{
+    color:var(--marrom-escuro);
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.ajuda-form{
+    color:#888;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.campo-form{
+    margin-bottom:18px;
+}
+
+.campo-form:last-child{
+    margin-bottom:0;
+}
+
+.campo-form label{
+    display:block;
+    color:#51463E;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--borda);
+    border-radius:8px;
+    background:var(--branco);
+    font-size:14px;
+    outline:none;
+}
+
+.campo-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus{
+    border-color:var(--caramelo);
+}
+
+.linha-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.campo-arquivo{
+    border:2px dashed var(--bege);
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    background:#FBF6EF;
+}
+
+.campo-arquivo label{
+    display:inline-block;
+    padding:11px 20px;
+    background:var(--caramelo);
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.campo-arquivo label:hover{
+    background:var(--caramelo-escuro);
+}
+
+.campo-arquivo input{
+    display:none;
+}
+
+.campo-arquivo p{
+    color:#888;
+    font-size:13px;
+    margin-top:12px;
+}
+
+.acoes-receita{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:12px;
+}
+
+.btn-cancelar{
+    padding:12px 20px;
+    border:1px solid var(--borda);
+    border-radius:8px;
+    color:#666;
+    background:var(--branco);
+}
+
+.btn-cancelar:hover{
+    background:#F2ECE4;
+}
+
+.btn-publicar{
+    padding:12px 22px;
+}
+
+.mensagem-receita{
+    text-align:center;
+    font-weight:bold;
+    color:var(--marrom);
+    margin-top:5px;
+}
+
+
+/* =========================================================
+   17. DICAS
+========================================================= */
+
+.dicas-cabecalho{
+    max-width:950px;
+    margin:auto;
+    padding:65px 20px 40px;
+    text-align:center;
+}
+
+.dicas-cabecalho h2{
+    font-size:42px;
+    color:var(--texto);
+    margin:12px 0 15px;
+}
+
+.dicas-cabecalho p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.7;
+}
+
+.dica-destaque{
+    max-width:1150px;
+    margin:10px auto 60px;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    min-height:400px;
+}
+
+.destaque-imagem{
+    overflow:hidden;
+    border-radius:18px 0 0 18px;
+}
+
+.destaque-imagem img{
+    width:100%;
+    height:100%;
+    min-height:400px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.dica-destaque:hover .destaque-imagem img{
+    transform:scale(1.03);
+}
+
+.destaque-conteudo{
+    background:var(--branco);
+    padding:45px;
+    border-radius:0 18px 18px 0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    box-shadow:var(--sombra);
+}
+
+.destaque-conteudo h2{
+    color:var(--texto);
+    font-size:31px;
+    line-height:1.25;
+    margin:14px 0;
+}
+
+.destaque-conteudo p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.btn-ler{
+    width:fit-content;
+    padding:12px 20px;
+}
+
+.busca-dicas{
+    max-width:1100px;
+    margin:0 auto 25px;
+    padding:30px;
+    background:var(--branco);
+    border-radius:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+    box-shadow:var(--sombra);
+}
+
+.busca-dicas h2{
+    margin-top:7px;
+    color:var(--texto);
+}
+
+.campo-busca-dicas{
+    display:flex;
+    width:430px;
+}
+
+.campo-busca-dicas input{
+    flex:1;
+    padding:13px;
+    border:1px solid var(--borda);
+    border-radius:8px 0 0 8px;
+    outline:none;
+}
+
+.campo-busca-dicas button{
+    border:none;
+    padding:0 20px;
+    background:var(--caramelo);
+    color:white;
+    border-radius:0 8px 8px 0;
+    font-weight:bold;
+}
+
+.categorias-dicas{
+    max-width:1100px;
+    margin:0 auto 45px;
+    padding:0 20px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.categorias-dicas button{
+    padding:10px 17px;
+    border:1px solid var(--borda);
+    background:var(--branco);
+    color:#666;
+    border-radius:20px;
+}
+
+.categorias-dicas button:hover,
+.categorias-dicas button.categoria-ativa{
+    background:var(--caramelo);
+    color:white;
+    border-color:var(--caramelo);
+}
+
+.reportagens{
+    max-width:1100px;
+    margin:auto;
+    padding:0 20px 60px;
+}
+
+.titulo-reportagens{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:25px;
+}
+
+.titulo-reportagens h2{
+    color:var(--texto);
+    font-size:30px;
+    margin-top:8px;
+}
+
+.titulo-reportagens>p{
+    color:#888;
+    font-size:14px;
+}
+
+.grade-dicas{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card-dica{
+    background:var(--branco);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+    transition:.25s;
+}
+
+.card-dica:hover{
+    transform:translateY(-5px);
+}
+
+.card-dica>img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-dica-conteudo{
+    padding:25px;
+}
+
+.card-dica-conteudo>span{
+    color:var(--caramelo);
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+}
+
+.card-dica-conteudo h3{
+    color:var(--texto);
+    font-size:21px;
+    line-height:1.3;
+    margin:10px 0;
+}
+
+.card-dica-conteudo p{
+    color:#666;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.card-dica-conteudo a{
+    color:var(--caramelo);
+    font-weight:bold;
+}
+
+.nenhuma-dica{
+    display:none;
+    text-align:center;
+    color:#777;
+    padding:40px;
+}
+
+.convite-dicas{
+    max-width:1100px;
+    margin:0 auto 60px;
+    padding:40px;
+    background:var(--bege-claro);
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.convite-dicas h2{
+    color:var(--marrom-escuro);
+    margin:8px 0;
+}
+
+.convite-dicas p{
+    color:var(--texto-2);
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   18. MATÉRIA
+========================================================= */
+
+.materia{
+    max-width:900px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.materia-categoria{
+    text-align:center;
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.materia>h1{
+    max-width:800px;
+    margin:15px auto;
+    text-align:center;
+    font-size:42px;
+    line-height:1.2;
+}
+
+.materia-subtitulo{
+    max-width:700px;
+    margin:0 auto 35px;
+    text-align:center;
+    color:#777;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.materia-imagem{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:40px;
+}
+
+.materia-conteudo{
+    background:var(--branco);
+    padding:45px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.materia-conteudo p{
+    color:var(--texto-2);
+    line-height:1.8;
+    margin-bottom:22px;
+}
+
+.materia-conteudo h2{
+    color:var(--marrom-escuro);
+    margin:30px 0 15px;
+}
+
+.materia-destaque{
+    background:var(--bege-claro);
+    padding:25px;
+    border-left:4px solid var(--caramelo);
+    border-radius:8px;
+    margin:30px 0;
+}
+
+.materia-destaque strong{
+    color:var(--marrom-escuro);
+    display:block;
+    margin-bottom:8px;
+}
+
+.materia-final{
+    margin-top:35px;
+    padding:30px;
+    background:var(--fundo);
+    border-radius:12px;
+    text-align:center;
+}
+
+.materia-final a{
+    display:inline-block;
+    margin-top:10px;
+    padding:11px 18px;
+    background:var(--caramelo);
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+
+/* =========================================================
+   19. DESAFIOS
+========================================================= */
+
+.desafios-intro{
+    max-width:850px;
+    margin:auto;
+    padding:70px 20px 45px;
+    text-align:center;
+}
+
+.desafios-intro h2{
+    color:var(--texto);
+    font-size:42px;
+    margin:12px 0;
+}
+
+.desafios-intro p{
+    color:#666;
+    line-height:1.7;
+}
+
+.desafio-destaque{
+    max-width:1150px;
+    margin:0 auto 60px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    background:var(--branco);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(74,53,40,.1);
+}
+
+.desafio-imagem img{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    object-fit:cover;
+}
+
+.desafio-conteudo{
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.etiqueta-desafio{
+    color:var(--caramelo);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.desafio-conteudo h2{
+    font-size:34px;
+    margin:12px 0 15px;
+}
+
+.desafio-conteudo>p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.informacoes-desafio{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.informacoes-desafio div{
+    background:var(--fundo);
+    padding:13px;
+    border-radius:10px;
+}
+
+.informacoes-desafio strong,
+.informacoes-desafio span{
+    display:block;
+    font-size:12px;
+}
+
+.informacoes-desafio strong{
+    color:#51463E;
+    margin-bottom:5px;
+}
+
+.informacoes-desafio span{
+    color:#777;
+}
+
+.btn-desafio{
+    width:fit-content;
+    padding:13px 22px;
+}
+
+.como-funciona-desafios,
+.outros-desafios,
+.ranking-secao{
+    max-width:1100px;
+    margin:0 auto 70px;
+    padding:0 20px;
+}
+
+.titulo-desafios{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.titulo-desafios h2{
+    color:var(--texto);
+    font-size:30px;
+    margin:10px 0;
+}
+
+.titulo-desafios p{
+    color:#777;
+}
+
+.passos-desafio{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.passo-desafio{
+    background:var(--branco);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+}
+
+.numero-passo{
+    color:var(--caramelo);
+    font-size:13px;
+    font-weight:bold;
+}
+
+.passo-desafio h3{
+    color:var(--marrom-escuro);
+    margin:12px 0 8px;
+}
+
+.passo-desafio p{
+    color:#666;
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   20. CARROSSEL DE DESAFIOS
+========================================================= */
+
+.carrossel-container{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.carrossel{
+    overflow:hidden;
+    width:100%;
+}
+
+.carrossel-itens{
+    display:flex;
+    gap:20px;
+    transition:transform .4s ease;
+}
+
+.card-desafio{
+    min-width:calc((100% - 40px)/3);
+    background:var(--branco);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:var(--sombra);
+}
+
+.card-desafio img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+
+.card-desafio-conteudo{
+    padding:20px;
+}
+
+.card-desafio-conteudo span{
+    color:var(--caramelo);
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.card-desafio-conteudo h3{
+    color:var(--texto);
+    margin:8px 0;
+}
+
+.card-desafio-conteudo p{
+    color:#666;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+.card-desafio-conteudo strong{
+    color:var(--caramelo);
+}
+
+.carrossel-btn{
+    min-width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:var(--caramelo);
+    color:white;
+    font-size:28px;
+}
+
+.carrossel-btn:hover{
+    background:var(--caramelo-escuro);
+}
+
+
+/* =========================================================
+   21. RANKING
+========================================================= */
+
+.ranking-secao{
+    max-width:900px;
+}
+
+.ranking-container{
+    background:var(--branco);
+    padding:15px 25px;
+    border-radius:18px;
+    box-shadow:var(--sombra);
+}
+
+.participante{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px 10px;
+    border-bottom:1px solid #EEE5DA;
+}
+
+.participante:last-child{
+    border-bottom:none;
+}
+
+.posicao{
+    width:35px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:var(--caramelo);
+}
+
+.participante>img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.dados-participante{
+    flex:1;
+}
+
+.dados-participante h3{
+    color:var(--texto);
+    margin-bottom:5px;
+}
+
+.dados-participante span{
+    color:#888;
+    font-size:13px;
+}
+
+.curtidas{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.curtidas strong{
+    color:var(--caramelo);
+}
+
+.btn-curtir{
+    width:35px;
+    height:35px;
+    border:1px solid var(--borda);
+    background:var(--branco);
+    border-radius:50%;
+}
+
+.btn-curtir img{
+    width:17px;
+    height:17px;
+}
+
+.btn-curtir:hover,
+.btn-curtir.curtido{
+    border-color:var(--caramelo);
+    background:var(--bege-claro);
+}
+
+.convite-desafio{
+    max-width:1100px;
+    margin:0 auto 60px;
+    padding:40px;
+    background:var(--bege-claro);
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.convite-desafio h2{
+    color:var(--marrom-escuro);
+    margin:10px 0;
+}
+
+.convite-desafio p{
+    color:var(--texto-2);
+    line-height:1.6;
+}
+
+
+/* =========================================================
+   22. ELEMENTOS ANTIGOS / SIMPLES
+========================================================= */
+
+.dicas,
+.desafios{
+    padding:60px;
+}
+
+.dica-card,
+.desafio-card,
+.ranking{
+    background:var(--branco);
+    max-width:600px;
+    margin:20px auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:var(--sombra);
+}
+
+
+/* =========================================================
+   23. RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media(max-width:850px){
+
+    header{
+        padding:20px 30px;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .texto-banner{
+        margin-left:40px;
+        margin-right:30px;
+    }
+
+    .texto-banner h2{
+        font-size:45px;
+    }
+
+    .sobre-cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .equipe-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .perfil-topo{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .botoes-perfil{
+        justify-content:center;
+    }
+
+    .receitas-perfil,
+    .favoritas{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .conquistas{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .receita-detalhe,
+    .desafio-destaque{
+        grid-template-columns:1fr;
+    }
+
+    .imagem-receita img,
+    .desafio-imagem img{
+        min-height:280px;
+    }
+
+    .receita-informacoes{
+        grid-template-columns:1fr;
+    }
+
+    .cadastro-area,
+    .login-area{
+        grid-template-columns:1fr;
+    }
+
+    .cadastro-apresentacao,
+    .login-apresentacao{
+        text-align:center;
+        align-items:center;
+    }
+
+    .cadastro-apresentacao>p{
+        max-width:500px;
+    }
+
+    .login-frase{
+        border-left:none;
+        border-top:2px solid var(--caramelo);
+    }
+
+    .grade-receitas{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .titulo-lista{
+        display:block;
+    }
+
+    .titulo-lista p{
+        margin-top:5px;
+    }
+
+    .passos-desafio{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .card-desafio{
+        min-width:calc((100% - 20px)/2);
+    }
+
+    .convite-dicas,
+    .convite-desafio{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .dica-destaque{
+        grid-template-columns:1fr;
+    }
+
+    .destaque-imagem{
+        border-radius:18px 18px 0 0;
+    }
+
+    .destaque-conteudo{
+        border-radius:0 0 18px 18px;
+    }
+
+    .busca-dicas{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .campo-busca-dicas{
+        width:100%;
+    }
+
+    .titulo-reportagens{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .grade-dicas{
+        grid-template-columns:1fr;
+    }
+
+    .categorias-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   24. RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media(max-width:600px){
+        .participar-pagina{
+        padding:25px 15px 40px;
+    }
+
+    .participar-intro h2{
+        font-size:30px;
+    }
+
+    .resumo-desafio{
+        grid-template-columns:1fr;
+    }
+
+    .form-desafio-container{
+        padding:30px 20px;
+    }
+
+    .form-desafio-topo h2{
+        font-size:25px;
+    }
+
+    .acoes-desafio{
+        flex-direction:column-reverse;
+        width:100%;
+    }
+
+    .acoes-desafio .btn-cancelar,
+    .acoes-desafio .btn-publicar{
+        width:100%;
+        text-align:center;
+    }
+
+    .sucesso-acoes{
+        flex-direction:column;
+    }
+
+    .sucesso-acoes a{
+        width:100%;
+        text-align:center;
+    }
+
+    header{
+        padding:18px 20px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .banner{
+        height:500px;
+    }
+
+    .texto-banner{
+        margin:0 25px;
+    }
+
+    .texto-banner h2{
+        font-size:38px;
+    }
+
+    .texto-banner p{
+        font-size:18px;
+    }
+
+    .botoes{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .categorias,
+    .receitas,
+    .dicas,
+    .desafios{
+        padding:45px 20px;
+    }
+
+    .sobre-cards,
+    .equipe-cards,
+    .receitas-perfil,
+    .favoritas,
+    .conquistas,
+    .grade-receitas,
+    .grade-dicas,
+    .passos-desafio{
+        grid-template-columns:1fr;
+    }
+
+    .equipe-cards{
+        max-width:350px;
+    }
+
+    .informacoes{
+        flex-direction:column;
+    }
+
+    .informacoes-desafio{
+        grid-template-columns:1fr;
+    }
+
+    .receita-conteudo{
+        padding:30px;
+    }
+
+    .bloco-receita,
+    .comentarios,
+    .avaliacao-receita{
+        padding:25px 20px;
+    }
+
+    .memoria-receita{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .estatisticas{
+        grid-template-columns:1fr;
+    }
+
+    .linha-form{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .acoes-receita{
+        flex-direction:column-reverse;
+        width:100%;
+    }
+
+    .btn-cancelar,
+    .btn-publicar{
+        width:100%;
+        text-align:center;
+    }
+
+    .cadastro-box,
+    .login-box{
+        padding:35px 25px;
+    }
+
+    .termos-pagina{
+        margin:30px auto;
+    }
+
+    .termos-introducao{
+        padding:30px 20px;
+    }
+
+    .termos-introducao h2{
+        font-size:26px;
+    }
+
+    .termos-conteudo{
+        padding:25px 20px;
+    }
+
+    .termo h3{
+        font-size:17px;
+    }
+
+    .receitas-cabecalho{
+        margin-top:35px;
+    }
+
+    .receitas-cabecalho h2,
+    .dicas-cabecalho h2{
+        font-size:28px;
+    }
+
+    .campo-busca{
+        flex-direction:column;
+        padding:8px;
+    }
+
+    .campo-busca button{
+        padding:11px;
+    }
+
+    .convite-publicar{
+        margin:0 20px 40px;
+        padding:25px;
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .btn-publicar{
+        width:100%;
+        text-align:center;
+    }
+
+    .destaque-conteudo{
+        padding:30px 22px;
+    }
+
+    .destaque-conteudo h2{
+        font-size:25px;
+    }
+
+    .campo-busca-dicas{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .campo-busca-dicas input,
+    .campo-busca-dicas button{
+        border-radius:8px;
+        min-height:45px;
+    }
+
+    .materia>h1{
+        font-size:30px;
+    }
+
+    .materia-conteudo{
+        padding:25px 20px;
+    }
+
+    .desafios-intro h2{
+        font-size:30px;
+    }
+
+    .desafio-conteudo{
+        padding:30px 22px;
+    }
+
+    .desafio-conteudo h2{
+        font-size:27px;
+    }
+
+    .card-desafio{
+        min-width:100%;
+    }
+
+    .carrossel-btn{
+        display:none;
+    }
+
+    .participante{
+        gap:10px;
+    }
+
+    .participante>img{
+        width:45px;
+        height:45px;
+    }
+
+    .dados-participante h3{
+        font-size:14px;
+    }
+
+    .categoria-destaque{
+        padding:30px 20px;
+    }
+
+    .categorias-pagina{
+        padding:35px 15px 50px;
+    }
+
+    .titulo-categorias h2{
+        font-size:30px;
+    }
+}
+
+
+/* =========================================================
+   25. RESPONSIVIDADE — CELULARES PEQUENOS
+========================================================= */
+
+@media(max-width:450px){
+        .participar-intro h2{
+        font-size:26px;
+    }
+
+    .form-desafio-container{
+        padding:25px 17px;
+    }
+
+    .participacao-sucesso{
+        padding:40px 20px;
+    }
+
+    .participacao-sucesso h2{
+        font-size:25px;
+    }
+
+    nav{
+        gap:9px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .texto-banner h2{
+        font-size:32px;
+    }
+
+    .texto-banner p{
+        font-size:16px;
+    }
+
+    .receita-conteudo h2{
+        font-size:25px;
+    }
+
+    .login-opcoes{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .perfil-topo{
+        padding:25px 20px;
+    }
+
+    .botoes-perfil{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn-editar,
+    .btn-sair{
+        justify-content:center;
+    }
+}

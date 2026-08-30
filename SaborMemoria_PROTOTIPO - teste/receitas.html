@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receitas - Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <h1>Sabor & Memória</h1>
+
+        <p>Compartilhe receitas. Crie memórias.</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="receitas.html" class="ativo">Receitas</a>
+
+        <a href="dicas.html">Dicas</a>
+
+        <a href="desafios.html">Desafios</a>
+
+        <a href="sobrenos.html">Sobre nós</a>
+
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html">Entrar</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- CABEÇALHO -->
+
+    <section class="receitas-cabecalho">
+
+        <span>EXPLORE</span>
+
+        <h2>Receitas para todos os momentos</h2>
+
+        <p>
+            Encontre receitas, descubra novos sabores e
+            compartilhe momentos especiais através da culinária.
+        </p>
+
+    </section>
+
+
+
+    <!-- BUSCA -->
+
+    <section class="area-busca">
+
+        <div class="campo-busca">
+
+            <input
+                type="text"
+                id="campoBusca"
+                placeholder="Pesquisar receita..."
+            >
+
+            <button
+                type="button"
+                id="btnPesquisar"
+            >
+                Pesquisar
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CATEGORIAS -->
+
+    <section class="categorias-receitas">
+
+        <div class="titulo-categorias">
+
+            <h3>Encontre por categoria</h3>
+
+            <p>
+                Escolha uma categoria para encontrar receitas.
+            </p>
+
+        </div>
+
+
+        <div class="botoes-categorias">
+
+            <button
+                type="button"
+                class="categoria-ativa"
+                data-categoria="todas"
+            >
+                Todas
+            </button>
+
+            <button
+                type="button"
+                data-categoria="bolos"
+            >
+                Bolos
+            </button>
+
+            <button
+                type="button"
+                data-categoria="doces"
+            >
+                Doces
+            </button>
+
+            <button
+                type="button"
+                data-categoria="salgados"
+            >
+                Salgados
+            </button>
+
+            <button
+                type="button"
+                data-categoria="massas"
+            >
+                Massas
+            </button>
+
+            <button
+                type="button"
+                data-categoria="saudaveis"
+            >
+                Saudáveis
+            </button>
+
+            <button
+                type="button"
+                data-categoria="restricoes"
+            >
+                Restrições alimentares
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LISTA DE RECEITAS -->
+
+    <section class="lista-receitas-pagina">
+
+        <div class="titulo-lista">
+
+            <div>
+
+                <span>RECEITAS</span>
+
+                <h2>Descubra novos sabores</h2>
+
+            </div>
+
+            <p id="resultadoBusca">
+                Confira nossas receitas disponíveis.
+            </p>
+
+        </div>
+
+
+
+        <div class="grade-receitas">
+
+
+            <!-- BOLO DE CENOURA -->
+
+            <article
+                class="card-receita"
+                data-categoria="bolos"
+                data-nome="Bolo de Cenoura"
+            >
+
+                <img
+                    src="imagens/bolo.jpg"
+                    alt="Bolo de cenoura"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Bolos
+                    </span>
+
+                    <h3>
+                        Bolo de Cenoura
+                    </h3>
+
+                    <p>
+                        Uma receita tradicional que traz
+                        memórias de família.
+                    </p>
+
+                    <a
+                        href="receita.html"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BRIGADEIRO -->
+
+            <article
+                class="card-receita"
+                data-categoria="doces"
+                data-nome="Brigadeiro"
+            >
+
+                <img
+                    src="imagens/brigadeiro.jpg"
+                    alt="Brigadeiro"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Doces
+                    </span>
+
+                    <h3>
+                        Brigadeiro
+                    </h3>
+
+                    <p>
+                        Um clássico brasileiro simples,
+                        delicioso e cheio de memórias.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TORTA SALGADA -->
+
+            <article
+                class="card-receita"
+                data-categoria="salgados"
+                data-nome="Torta Salgada"
+            >
+
+                <img
+                    src="imagens/torta.jpg"
+                    alt="Torta salgada"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Salgados
+                    </span>
+
+                    <h3>
+                        Torta Salgada
+                    </h3>
+
+                    <p>
+                        Uma opção prática para compartilhar
+                        com a família.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MACARRÃO -->
+
+            <article
+                class="card-receita"
+                data-categoria="massas"
+                data-nome="Macarrão Caseiro"
+            >
+
+                <img
+                    src="imagens/macarrao.jpg"
+                    alt="Macarrão caseiro"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Massas
+                    </span>
+
+                    <h3>
+                        Macarrão Caseiro
+                    </h3>
+
+                    <p>
+                        Uma receita especial para quem
+                        gosta de preparar massas.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SALADA -->
+
+            <article
+                class="card-receita"
+                data-categoria="saudaveis"
+                data-nome="Salada Colorida"
+            >
+
+                <img
+                    src="imagens/salada.jpg"
+                    alt="Salada colorida"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Saudáveis
+                    </span>
+
+                    <h3>
+                        Salada Colorida
+                    </h3>
+
+                    <p>
+                        Uma opção leve e colorida para
+                        suas refeições.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- BOLO SEM LACTOSE -->
+
+            <article
+                class="card-receita"
+                data-categoria="restricoes"
+                data-nome="Bolo sem Lactose"
+            >
+
+                <img
+                    src="imagens/bolo-sem-lactose.jpg"
+                    alt="Bolo sem lactose"
+                >
+
+                <div class="conteudo-card">
+
+                    <span class="categoria-card">
+                        Restrições alimentares
+                    </span>
+
+                    <h3>
+                        Bolo sem Lactose
+                    </h3>
+
+                    <p>
+                        Uma alternativa para quem precisa
+                        evitar lactose.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="btn-ver-receita"
+                    >
+                        Ver receita
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- NENHUM RESULTADO -->
+
+        <p
+            id="nenhumaReceita"
+            class="nenhuma-receita"
+        >
+            Nenhuma receita encontrada.
+        </p>
+
+    </section>
+
+
+
+    <!-- PUBLICAR RECEITA -->
+
+    <section class="convite-publicar">
+
+        <div>
+
+            <span>COMPARTILHE</span>
+
+            <h2>
+                Tem uma receita especial?
+            </h2>
+
+            <p>
+                Compartilhe sua receita com a comunidade
+                Sabor & Memória.
+            </p>
+
+        </div>
+
+
+        <a
+            href="adicionar-receita.html"
+            class="btn-publicar"
+        >
+            Publicar receita
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        © 2026 Sabor & Memória
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT EXTERNO -->
+
+<script src="js/receitas.js"></script>
+
+</body>
+</html>

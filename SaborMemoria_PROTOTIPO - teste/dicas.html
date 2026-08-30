@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dicas - Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <h1>Sabor & Memória</h1>
+
+        <p>Compartilhe receitas. Crie memórias.</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="receitas.html">Receitas</a>
+
+        <a href="dicas.html" class="ativo">Dicas</a>
+
+        <a href="desafios.html">Desafios</a>
+
+        <a href="sobrenos.html">Sobre nós</a>
+
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html">Entrar</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     TOPO DA PÁGINA
+========================= -->
+
+<section class="dicas-cabecalho">
+
+    <span>INFORMAÇÃO E BEM-ESTAR</span>
+
+    <h2>Dicas para uma alimentação mais consciente</h2>
+
+    <p>
+
+        Informações simples para ajudar você a fazer melhores escolhas,
+        conhecer novos alimentos e aproveitar ainda mais seus momentos
+        na cozinha.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     DESTAQUE
+========================= -->
+
+<section class="dica-destaque">
+
+    <div class="destaque-imagem">
+
+        <img
+            src="imagens/alimentacao.jpg"
+            alt="Alimentos variados e saudáveis"
+        >
+
+    </div>
+
+
+    <div class="destaque-conteudo">
+
+        <span class="categoria-dica">
+
+            ALIMENTAÇÃO
+
+        </span>
+
+
+        <h2>
+
+            Pequenas mudanças podem transformar sua alimentação
+
+        </h2>
+
+
+        <p>
+
+            Uma alimentação equilibrada não precisa ser complicada.
+            Conheça algumas atitudes simples que podem fazer parte
+            da sua rotina.
+
+        </p>
+
+
+        <a
+            href="dica-alimentacao.html"
+            class="btn-ler"
+        >
+
+            Ler reportagem
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BUSCA
+========================= -->
+
+<section class="busca-dicas">
+
+    <div>
+
+        <span>ENCONTRE UMA DICA</span>
+
+        <h2>O que você quer aprender?</h2>
+
+    </div>
+
+
+    <div class="campo-busca-dicas">
+
+        <input
+            type="text"
+            id="buscaDica"
+            placeholder="Pesquisar dicas..."
+        >
+
+
+        <button
+            type="button"
+            id="btnBuscarDicas"
+        >
+
+            Pesquisar
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIAS
+========================= -->
+
+<section class="categorias-dicas">
+
+    <button
+        type="button"
+        class="categoria-ativa"
+        data-categoria="todas"
+    >
+
+        Todas
+
+    </button>
+
+
+    <button
+        type="button"
+        data-categoria="alimentacao"
+    >
+
+        Alimentação
+
+    </button>
+
+
+    <button
+        type="button"
+        data-categoria="restricoes"
+    >
+
+        Restrições alimentares
+
+    </button>
+
+
+    <button
+        type="button"
+        data-categoria="memoria"
+    >
+
+        Memória e alimentação
+
+    </button>
+
+
+    <button
+        type="button"
+        data-categoria="cozinha"
+    >
+
+        Cozinha
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     REPORTAGENS
+========================= -->
+
+<section class="reportagens">
+
+
+    <div class="titulo-reportagens">
+
+        <div>
+
+            <span>MAIS CONTEÚDOS</span>
+
+            <h2>Explore nossas dicas</h2>
+
+        </div>
+
+
+        <p id="resultadoDicas">
+
+            Conteúdos selecionados para você.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="grade-dicas">
+
+
+        <!-- =========================
+             DICA 1
+        ========================= -->
+
+        <article
+            class="card-dica"
+            data-categoria="alimentacao"
+            data-nome="Alimentação equilibrada"
+        >
+
+            <img
+                src="imagens/alimentacao.jpg"
+                alt="Alimentos variados"
+            >
+
+
+            <div class="card-dica-conteudo">
+
+                <span>ALIMENTAÇÃO</span>
+
+
+                <h3>
+
+                    Como construir uma alimentação mais equilibrada
+
+                </h3>
+
+
+                <p>
+
+                    Veja atitudes simples que podem ajudar
+                    a melhorar sua rotina alimentar.
+
+                </p>
+
+
+                <a href="dica-alimentacao.html">
+
+                    Ler matéria
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             DICA 2
+        ========================= -->
+
+        <article
+            class="card-dica"
+            data-categoria="restricoes"
+            data-nome="Restrições alimentares"
+        >
+
+            <img
+                src="imagens/restricoes.jpg"
+                alt="Alimentos para diferentes necessidades"
+            >
+
+
+            <div class="card-dica-conteudo">
+
+                <span>RESTRIÇÕES</span>
+
+
+                <h3>
+
+                    Como adaptar receitas para diferentes necessidades
+
+                </h3>
+
+
+                <p>
+
+                    Descubra como pequenas substituições podem
+                    tornar uma receita mais adequada.
+
+                </p>
+
+
+                <a href="dica-restricoes.html">
+
+                    Ler matéria
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             DICA 3
+        ========================= -->
+
+        <article
+            class="card-dica"
+            data-categoria="memoria"
+            data-nome="Memória afetiva"
+        >
+
+            <img
+                src="imagens/memoria.jpg"
+                alt="Pessoa preparando uma receita"
+            >
+
+
+            <div class="card-dica-conteudo">
+
+                <span>MEMÓRIA E ALIMENTAÇÃO</span>
+
+
+                <h3>
+
+                    Por que algumas receitas despertam lembranças?
+
+                </h3>
+
+
+                <p>
+
+                    Entenda a relação entre sabores,
+                    experiências e memórias afetivas.
+
+                </p>
+
+
+                <a href="dica-memoria.html">
+
+                    Ler matéria
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             DICA 4
+        ========================= -->
+
+        <article
+            class="card-dica"
+            data-categoria="cozinha"
+            data-nome="Organização na cozinha"
+        >
+
+            <img
+                src="imagens/cozinha.jpg"
+                alt="Cozinha organizada"
+            >
+
+
+            <div class="card-dica-conteudo">
+
+                <span>COZINHA</span>
+
+
+                <h3>
+
+                    Organização: o primeiro passo antes de cozinhar
+
+                </h3>
+
+
+                <p>
+
+                    Algumas mudanças simples podem deixar
+                    o preparo das receitas mais tranquilo.
+
+                </p>
+
+
+                <a href="dica-cozinha.html">
+
+                    Ler matéria
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+
+    <!-- =========================
+         NENHUM RESULTADO
+    ========================= -->
+
+    <p
+        id="nenhumaDica"
+        class="nenhuma-dica"
+    >
+
+        Nenhuma dica encontrada.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     CHAMADA FINAL
+========================= -->
+
+<section class="convite-dicas">
+
+    <div>
+
+        <span>SABOR & MEMÓRIA</span>
+
+
+        <h2>
+
+            Conhecimento também faz parte da nossa mesa.
+
+        </h2>
+
+
+        <p>
+
+            Explore nossas receitas, descubra novas possibilidades
+            e compartilhe experiências com a comunidade.
+
+        </p>
+
+    </div>
+
+
+    <a
+        href="receitas.html"
+        class="btn-dicas"
+    >
+
+        Explorar receitas
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Sabor & Memória
+
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT EXTERNO
+========================= -->
+
+<script src="js/dicas.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Participar do Desafio | Sabor & Memória</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <h1>
+            Sabor & Memória
+        </h1>
+
+        <p>
+            Compartilhe receitas. Crie memórias.
+        </p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="receitas.html">
+            Receitas
+        </a>
+
+        <a href="dicas.html">
+            Dicas
+        </a>
+
+        <a href="desafios.html" class="ativo">
+            Desafios
+        </a>
+
+        <a href="sobrenos.html">
+            Sobre nós
+        </a>
+
+        <a href="perfil.html">
+            Perfil
+        </a>
+
+        <a href="login.html">
+            Entrar
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     PÁGINA
+===================================================== -->
+
+<main class="participar-pagina">
+
+
+<!-- =====================================================
+     VOLTAR
+===================================================== -->
+
+<div class="voltar-desafio">
+
+    <a href="desafios.html">
+        ← Voltar para desafios
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<section class="participar-intro">
+
+    <span>
+        DESAFIO DE SETEMBRO
+    </span>
+
+    <h2>
+        Receita que traz boas memórias
+    </h2>
+
+    <p>
+        Conte uma história através da sua receita.
+        Não precisa ser perfeita. Precisa ter significado.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     INFORMAÇÕES DO DESAFIO
+===================================================== -->
+
+<section class="resumo-desafio">
+
+
+    <div class="resumo-item">
+
+        <span>
+            TEMA
+        </span>
+
+        <strong>
+            Memória afetiva
+        </strong>
+
+    </div>
+
+
+    <div class="resumo-item">
+
+        <span>
+            PERÍODO
+        </span>
+
+        <strong>
+            01 a 30 de Setembro
+        </strong>
+
+    </div>
+
+
+    <div class="resumo-item">
+
+        <span>
+            VOTAÇÃO
+        </span>
+
+        <strong>
+            Curtidas
+        </strong>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FORMULÁRIO
+===================================================== -->
+
+<section class="form-desafio-container">
+
+
+    <div class="form-desafio-topo">
+
+        <span>
+            SUA PARTICIPAÇÃO
+        </span>
+
+        <h2>
+            Conte sua história
+        </h2>
+
+        <p>
+            Preencha os campos abaixo para registrar
+            sua participação no desafio.
+        </p>
+
+    </div>
+
+
+
+    <form
+        id="formDesafio"
+        class="form-desafio"
+    >
+
+
+        <!-- NOME -->
+
+        <div class="campo-form">
+
+            <label for="nomeParticipante">
+                Seu nome
+            </label>
+
+            <input
+                type="text"
+                id="nomeParticipante"
+                name="nomeParticipante"
+                placeholder="Digite seu nome"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- NOME DA RECEITA -->
+
+        <div class="campo-form">
+
+            <label for="nomeReceitaDesafio">
+                Nome da receita
+            </label>
+
+            <input
+                type="text"
+                id="nomeReceitaDesafio"
+                name="nomeReceitaDesafio"
+                placeholder="Ex.: Bolo de cenoura da minha avó"
+                required
+            >
+
+        </div>
+
+
+
+        <!-- FOTO -->
+
+        <div class="campo-form">
+
+            <label for="fotoReceita">
+                Foto da receita
+            </label>
+
+            <input
+                type="file"
+                id="fotoReceita"
+                name="fotoReceita"
+                accept="image/*"
+            >
+
+            <small id="nomeFoto">
+                Nenhuma imagem selecionada.
+            </small>
+
+        </div>
+
+
+
+        <!-- PREVISUALIZAÇÃO -->
+
+        <div
+            id="previewImagem"
+            class="preview-imagem"
+        >
+
+            <img
+                id="imagemPreview"
+                src=""
+                alt="Pré-visualização da receita"
+            >
+
+        </div>
+
+
+
+        <!-- HISTÓRIA -->
+
+        <div class="campo-form">
+
+            <label for="historiaReceita">
+                Qual é a história dessa receita?
+            </label>
+
+            <textarea
+                id="historiaReceita"
+                name="historiaReceita"
+                placeholder="Conte por que essa receita é especial para você..."
+                required
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- MEMÓRIA -->
+
+        <div class="campo-form">
+
+            <label for="memoriaReceita">
+                Que memória ela desperta?
+            </label>
+
+            <textarea
+                id="memoriaReceita"
+                name="memoriaReceita"
+                placeholder="Conte sobre a lembrança, pessoa ou momento relacionado a esse sabor..."
+                required
+            ></textarea>
+
+        </div>
+
+
+
+        <!-- TERMOS -->
+
+        <div class="termos-desafio">
+
+            <input
+                type="checkbox"
+                id="aceiteDesafio"
+                required
+            >
+
+            <label for="aceiteDesafio">
+
+                Confirmo que as informações enviadas
+                são minhas e aceito participar do desafio
+                Sabor & Memória.
+
+            </label>
+
+        </div>
+
+
+
+        <!-- BOTÕES -->
+
+        <div class="acoes-desafio">
+
+            <a
+                href="desafios.html"
+                class="btn-cancelar"
+            >
+                Cancelar
+            </a>
+
+
+            <button
+                type="submit"
+                class="btn-publicar"
+            >
+                Enviar participação →
+            </button>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+
+        <div
+            id="mensagemDesafio"
+            class="mensagem-desafio"
+        ></div>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     DEPOIS DE PARTICIPAR
+===================================================== -->
+
+<section
+    id="participacaoSucesso"
+    class="participacao-sucesso"
+>
+
+
+    <div class="icone-sucesso">
+        ✓
+    </div>
+
+
+    <span>
+        PARTICIPAÇÃO REGISTRADA
+    </span>
+
+
+    <h2>
+        Sua história entrou no desafio!
+    </h2>
+
+
+    <p>
+        Obrigado por compartilhar uma memória com
+        a comunidade Sabor & Memória.
+    </p>
+
+
+    <div class="sucesso-acoes">
+
+        <a
+            href="desafios.html"
+            class="btn-desafio"
+        >
+            Ver ranking
+        </a>
+
+        <a
+            href="receitas.html"
+            class="btn-secundario"
+        >
+            Explorar receitas
+        </a>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     RODAPÉ
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 Sabor & Memória
+    </p>
+
+</footer>
+
+
+
+<script src="js/participar-desafio.js"></script>
+
+
+</body>
+
+</html>

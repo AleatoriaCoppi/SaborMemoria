@@ -1,0 +1,512 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publicar Receita - Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <h1>Sabor & Memória</h1>
+
+        <p>Compartilhe receitas. Crie memórias.</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="receitas.html">Receitas</a>
+
+        <a href="dicas.html">Dicas</a>
+
+        <a href="desafios.html">Desafios</a>
+
+        <a href="sobrenos.html">Sobre nós</a>
+
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html">Entrar</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     PÁGINA
+========================= -->
+
+<main class="adicionar-receita">
+
+
+    <!-- TÍTULO -->
+
+    <section class="titulo-adicionar">
+
+        <span>COMPARTILHE SEU SABOR</span>
+
+        <h2>Publique sua receita</h2>
+
+        <p>
+            Compartilhe uma receita especial e ajude outras pessoas
+            a descobrirem novos sabores e criarem novas memórias.
+        </p>
+
+    </section>
+
+
+
+    <!-- FORMULÁRIO -->
+
+    <form
+        class="form-receita"
+        id="formReceita"
+    >
+
+
+        <!-- INFORMAÇÕES PRINCIPAIS -->
+
+        <section class="bloco-formulario">
+
+            <h3>Informações da receita</h3>
+
+            <p class="ajuda-form">
+                Conte um pouco sobre o prato que você deseja compartilhar.
+            </p>
+
+
+            <div class="campo-form">
+
+                <label for="nomeReceita">
+                    Nome da receita
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeReceita"
+                    name="nomeReceita"
+                    placeholder="Ex.: Bolo de Cenoura"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="linha-form">
+
+                <div class="campo-form">
+
+                    <label for="categoria">
+                        Categoria
+                    </label>
+
+                    <select
+                        id="categoria"
+                        name="categoria"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione uma categoria
+                        </option>
+
+                        <option value="bolos">
+                            Bolos
+                        </option>
+
+                        <option value="doces">
+                            Doces
+                        </option>
+
+                        <option value="salgados">
+                            Salgados
+                        </option>
+
+                        <option value="massas">
+                            Massas
+                        </option>
+
+                        <option value="saudaveis">
+                            Saudáveis
+                        </option>
+
+                        <option value="restricoes">
+                            Restrições alimentares
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="dificuldade">
+                        Dificuldade
+                    </label>
+
+                    <select
+                        id="dificuldade"
+                        name="dificuldade"
+                        required
+                    >
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="facil">
+                            Fácil
+                        </option>
+
+                        <option value="medio">
+                            Médio
+                        </option>
+
+                        <option value="dificil">
+                            Difícil
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="linha-form">
+
+                <div class="campo-form">
+
+                    <label for="tempo">
+                        Tempo de preparo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tempo"
+                        name="tempo"
+                        placeholder="Ex.: 50 minutos"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo-form">
+
+                    <label for="porcoes">
+                        Rendimento
+                    </label>
+
+                    <input
+                        type="text"
+                        id="porcoes"
+                        name="porcoes"
+                        placeholder="Ex.: 8 porções"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <div class="campo-form">
+
+                <label for="descricao">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    placeholder="Conte um pouco sobre essa receita..."
+                    required
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- IMAGEM -->
+
+        <section class="bloco-formulario">
+
+            <h3>Imagem da receita</h3>
+
+            <p class="ajuda-form">
+                Escolha uma imagem que represente o prato.
+            </p>
+
+
+            <div class="campo-arquivo">
+
+                <label for="imagemReceita">
+                    Escolher imagem
+                </label>
+
+                <input
+                    type="file"
+                    id="imagemReceita"
+                    name="imagemReceita"
+                    accept="image/*"
+                >
+
+                <p id="nomeImagem">
+                    Nenhuma imagem selecionada.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INGREDIENTES -->
+
+        <section class="bloco-formulario">
+
+            <h3>Ingredientes</h3>
+
+            <p class="ajuda-form">
+                Informe os ingredientes e suas respectivas quantidades.
+            </p>
+
+
+            <div class="campo-form">
+
+                <label for="ingredientes">
+                    Ingredientes
+                </label>
+
+                <textarea
+                    id="ingredientes"
+                    name="ingredientes"
+                    placeholder="Ex.:
+
+3 cenouras médias
+4 ovos
+1 xícara de óleo
+2 xícaras de açúcar
+2 xícaras de farinha de trigo
+1 colher de fermento"
+                    required
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MODO DE PREPARO -->
+
+        <section class="bloco-formulario">
+
+            <h3>Modo de preparo</h3>
+
+            <p class="ajuda-form">
+                Explique o passo a passo para preparar a receita.
+            </p>
+
+
+            <div class="campo-form">
+
+                <label for="preparo">
+                    Passo a passo
+                </label>
+
+                <textarea
+                    id="preparo"
+                    name="preparo"
+                    placeholder="Ex.:
+
+1. Bata as cenouras, os ovos e o óleo.
+2. Adicione o açúcar.
+3. Acrescente a farinha.
+4. Misture o fermento.
+5. Leve ao forno."
+                    required
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEMÓRIA -->
+
+        <section class="bloco-formulario">
+
+            <h3>Memória afetiva</h3>
+
+            <p class="ajuda-form">
+                Essa parte é especial no Sabor & Memória.
+                Conte a história ou lembrança relacionada à receita.
+            </p>
+
+
+            <div class="campo-form">
+
+                <label for="memoria">
+                    História da receita
+                </label>
+
+                <textarea
+                    id="memoria"
+                    name="memoria"
+                    placeholder="Ex.: Essa receita me lembra os domingos em família..."
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RESTRIÇÕES -->
+
+        <section class="bloco-formulario">
+
+            <h3>Informações alimentares</h3>
+
+            <p class="ajuda-form">
+                Informe se a receita possui alguma característica
+                alimentar importante.
+            </p>
+
+
+            <div class="campo-form">
+
+                <label for="restricao">
+                    Observações
+                </label>
+
+                <input
+                    type="text"
+                    id="restricao"
+                    name="restricao"
+                    placeholder="Ex.: Sem lactose, sem glúten ou nenhuma"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TERMOS -->
+
+        <section class="bloco-formulario">
+
+            <div class="termos">
+
+                <input
+                    type="checkbox"
+                    id="aceitarTermos"
+                    required
+                >
+
+                <label for="aceitarTermos">
+
+                    Confirmo que as informações desta receita
+                    são verdadeiras e aceito os
+
+                    <a href="termos.html" target="_blank">
+                        Termos de Uso
+                    </a>
+
+                    do Sabor & Memória.
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BOTÕES -->
+
+        <div class="acoes-receita">
+
+            <a
+                href="receitas.html"
+                class="btn-cancelar"
+            >
+                Cancelar
+            </a>
+
+
+            <button
+                type="submit"
+                class="btn-publicar"
+            >
+                Publicar receita
+            </button>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+
+        <p
+            id="mensagemReceita"
+            class="mensagem-receita"
+        ></p>
+
+
+    </form>
+
+</main>
+
+
+
+<!-- RODAPÉ -->
+
+<footer>
+
+    <p>
+        © 2026 Sabor & Memória
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT EXTERNO -->
+
+<script src="js/adicionar-receita.js"></script>
+
+</body>
+</html>

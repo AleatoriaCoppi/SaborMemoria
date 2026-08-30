@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Conta - Sabor & Memória</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <h1>Sabor & Memória</h1>
+
+        <p>Compartilhe receitas. Crie memórias.</p>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="receitas.html">Receitas</a>
+
+        <a href="dicas.html">Dicas</a>
+
+        <a href="desafios.html">Desafios</a>
+
+        <a href="sobrenos.html">Sobre nós</a>
+
+        <a href="perfil.html">Perfil</a>
+
+        <a href="login.html">Entrar</a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="cadastro-pagina">
+
+
+    <section class="cadastro-area">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="cadastro-apresentacao">
+
+
+            <img
+                src="imagens/logo.png"
+                alt="Logo Sabor & Memória"
+                class="cadastro-logo"
+            >
+
+
+            <h2>
+                Faça parte do<br>
+                Sabor & Memória
+            </h2>
+
+
+            <p>
+
+                Crie sua conta e tenha um espaço para
+                guardar suas receitas favoritas,
+                compartilhar experiências e registrar
+                memórias especiais.
+
+            </p>
+
+
+            <div class="cadastro-beneficios">
+
+
+                <div class="beneficio">
+
+                    <img
+                        src="imagens/receita.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Compartilhe suas receitas
+                    </span>
+
+                </div>
+
+
+
+                <div class="beneficio">
+
+                    <img
+                        src="imagens/favorito.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Salve suas receitas favoritas
+                    </span>
+
+                </div>
+
+
+
+                <div class="beneficio">
+
+                    <img
+                        src="imagens/memoria.png"
+                        alt=""
+                    >
+
+                    <span>
+                        Guarde suas memórias culinárias
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORMULÁRIO -->
+
+        <div class="cadastro-box">
+
+
+            <div class="cadastro-titulo">
+
+                <h2>
+                    Criar sua conta
+                </h2>
+
+                <p>
+                    Preencha seus dados para começar.
+                </p>
+
+            </div>
+
+
+
+            <form>
+
+
+                <div class="campo">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Crie uma senha"
+                        required
+                    >
+
+                    <small>
+                        Utilize pelo menos 8 caracteres.
+                    </small>
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        placeholder="Digite a senha novamente"
+                        required
+                    >
+
+               <div class="termos">
+
+    <input
+        type="checkbox"
+        id="termos"
+        required
+    >
+
+    <label for="termos">
+
+        Li e concordo com os
+
+        <a href="termos.html" target="_blank">
+            Termos de Uso
+        </a>
+
+        do Sabor & Memória.
+
+    </label>
+
+</div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn-cadastro"
+                >
+
+                    Criar minha conta
+
+                </button>
+
+
+            </form>
+
+
+
+            <div class="login-link">
+
+                <p>
+
+                    Já possui uma conta?
+
+                    <a href="login.html">
+                        Entrar
+                    </a>
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        © 2026 Sabor & Memória
+    </p>
+
+</footer>
+
+<script src="js/cadastro.js"></script>
+
+</body>
+
+</html>
